@@ -14,3 +14,14 @@ var swiper = new Swiper(".mySwiper", {
       prevEl: ".swiper-button-prev"
     }
   });
+
+const Social = document.querySelector(".social");
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    Social.classList.remove("social--hide")
+  } else {
+    Social.classList.add("social--hide")
+  }
+}
